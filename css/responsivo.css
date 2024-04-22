@@ -1,0 +1,261 @@
+/*  desktop (col-lg) 992+ */
+@media (max-width: 992) {
+}
+
+/*  desktop e trablet (col-md) 778 ate 991 */
+@media (min-width: 778) and (max-width: 991) {
+}
+
+/*  trablet (col-sm) 576 ate 777*/
+@media (min-width: 576) and (max-width: 777) {
+}
+
+/*  tablet e celular (col) 0 ate 767 */
+@media (max-width: 767px) {
+  .no-mobile {
+    display: none !important;
+  }
+
+  .col-one {
+    padding-left: 35px !important;
+    padding-right: 35px !important;
+  }
+
+  .navbar-toggler-icon {
+    padding-top: 5px;
+  }
+
+  .navbar-collapse {
+    background-color: #fff2cc !important;
+    padding: 20px;
+    text-align: center;
+    border-radius: 40px;
+  }
+
+  .navbar-collapse .btn-white {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .navbar-collapse .btn-icon {
+    padding-right: 20px;
+  }
+
+  .navbar-collapse .btn-icon span.icon {
+    display: none;
+  }
+
+  .banner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .text-banner h1 {
+    font-size: 36px;
+  }
+
+  .text-banner p {
+    font-size: 18px;
+  }
+  .btn-yellow {
+    padding: 13px 23px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .btn-w-y .btn-white {
+    padding: 13px 23px 13px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .btn-icon-left span.icon-left {
+    margin-left: -55px;
+    margin-top: -8px;
+  }
+
+  .btn-w-y {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicos {
+    padding-bottom: 50px;
+  }
+
+  .container-menu {
+    /* display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto; */
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+  }
+
+  .container-menu a {
+    margin-bottom: 10px;
+  }
+
+  .img-produto {
+    position: absolute;
+    left: 15px;
+  }
+
+  .card-item {
+    height: 110px;
+    padding-left: 110px;
+    justify-content: center;
+    align-items: start;
+  }
+  .card-item .img-produto img {
+    height: 80px;
+  }
+
+  .title-produto {
+    margin-top: 0px !important;
+    width: 100% !important;
+    height: 30px !important;
+    text-align: left !important;
+  }
+
+  .price-produto {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    font-size: 22px !important;
+  }
+
+  .card-item .add-carrinho {
+    margin-top: 5px;
+  }
+
+  #itensCarrinho .mb-5 {
+    margin-bottom: 15px !important;
+  }
+  .cardapios {
+    padding-bottom: 0px;
+  }
+
+  .depoimentos {
+    padding-bottom: 50px;
+  }
+
+  .reserva {
+    padding-bottom: 50px;
+  }
+
+  .card-secondary {
+    padding: 45px;
+    border-radius: 50px;
+  }
+
+  .container-logo-footer {
+    justify-content: center;
+  }
+
+  .container-texto-footer p {
+    text-align: center;
+  }
+
+  .container-redes-footer {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .row h1 {
+    font-size: 1.9rem;
+  }
+
+  /* carrinho */
+
+  .modal-full {
+    padding: 40px;
+  }
+
+  .modal-full .item-carrinho {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .modal-full .img-produto {
+    position: relative;
+    left: 0;
+  }
+
+  .modal-full .img-produto img {
+    width: 50px;
+  }
+
+  .modal-full .dados-produto {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+  }
+
+  .modal-full .title-produto {
+    font-size: 16px;
+  }
+
+  .modal-full .title-produto,
+  .modal-full .price-produto {
+    font-size: 16px !important;
+  }
+
+  .modal-full .add-numero-itens {
+    padding: 2px 10px;
+  }
+
+  .modal-full .form-control {
+    font-size: 17px;
+  }
+
+  .modal-full .container-cep .btn {
+    right: 40px;
+    top: 15px;
+  }
+
+  .m-footer .container .botoens {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .m-footer .container .botoens .btnContinuar {
+    padding: 13px 23px !important;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .m-footer .container .botoens .btnRevisarPedido {
+    padding: 13px 10px !important;
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: start;
+    margin-right: 10px;
+  }
+
+  .m-footer .container .botoens .btnEnviarPedido {
+    padding: 13px 23px !important;
+    margin-top: 20px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .m-footer .container .botoens .btnVoltar {
+    padding: 13px 23px !important;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .img-map {
+    width: 90px;
+  }
+}

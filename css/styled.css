@@ -1,0 +1,26 @@
+/* cores */
+
+:root {
+  --color-background: #fffdf7;
+  --color-black: #212121;
+  --color-full-black: #000000;
+  --color-text: #4f4f4f;
+  --color-text-out: #90908e;
+  --color-primary: #ffbf00;
+  --color-secondary: #fff2cc;
+  --color-white: #ffffff;
+  --color-red: #e74c3c;
+  --color-green: #2eec71;
+  --color-separete: #cccccc;
+}
+
+/* font-family */
+
+@font-face {
+  font-family: "PoppinsMedium";
+  src: url(../fonts/Poppins-Medium.otf);
+}
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url(../fonts/Poppins-Regular.otf);
+}
