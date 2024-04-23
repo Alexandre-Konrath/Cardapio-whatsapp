@@ -490,7 +490,7 @@ footer {
   right: 0;
   padding: 50px;
   background-color: var(--color-white);
-  z-index: 9990;
+  z-index: 999;
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
@@ -645,7 +645,7 @@ footer {
   font-size: 24px;
 }
 
-.m-footer .container .botoens .btnVoltar {
+.m-footer .container .botoes .btnVoltar {
   padding: 13px 23px;
 }
 
@@ -768,7 +768,7 @@ select.form-control {
   position: fixed;
   right: 20px;
   top: 20px;
-  z-index: 1;
+  z-index: 9999;
 }
 
 .toast {
@@ -796,6 +796,7 @@ select.form-control {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "PoppinsMedium";
 }
 
 .carrinho-vazio i {
