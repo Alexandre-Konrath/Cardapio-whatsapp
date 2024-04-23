@@ -101,7 +101,7 @@ cardapio.metodos = {
           MEU_CARRINHO.push(item[0])
         }
 
-        cardapio.metodos.mensagem('cuzinho grande', 'green')
+        cardapio.metodos.mensagem('item adicionado ao carrinho', 'green')
         $("#qntd-" + id).text(0)
 
         cardapio.metodos.atualizarBadgeTotal()
@@ -319,6 +319,7 @@ cardapio.metodos = {
     let uf = $("#txtUF").val().trim();
     let numero = $("#txtNumero").val().trim();
     let complemento = $("#txtComplemento").val().trim();
+    let nome = $("#txtNome").val().trim()
 
     if (cep.length <= 0) {
       cardapio.metodos.mensagem("Informe o CEP, por favor.");
@@ -356,6 +357,18 @@ cardapio.metodos = {
       return;
     }
 
+    if (complemento.length <= 0) {
+      cardapio.metodos.mensagem("Informe o Complemento, para acharmos melhor seu endereço, por favor.");
+      $("#txtComplemento").focus();
+      return;
+    }
+
+    if (nome.length <= 0) {
+      cardapio.metodos.mensagem("Informe seu Nome, por favor.");
+      $("#txtNome").focus();
+      return;
+    }
+
     MEU_ENDERECO = {
       cep: cep,
       endereco: endereco,
@@ -364,6 +377,7 @@ cardapio.metodos = {
       uf: uf,
       numero: numero,
       complemento: complemento,
+      nome: nome
     }
 
     cardapio.metodos.carregarEtapa(3)
@@ -383,6 +397,8 @@ cardapio.metodos = {
       $("#listaItensResumo").append(temp)
     })
 
+    $("#resumoNome").html(`${MEU_ENDERECO.nome}`)
+
     $("#resumoEndereco").html(`${MEU_ENDERECO.endereco},
     ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro}`)
 
@@ -398,6 +414,7 @@ cardapio.metodos = {
       var texto = 'Olá gostaria de fazer um pedido:';
       texto += `\n*Itens do pedido:*\n\n\${itens}`;
       texto += '\n*Endereço de entrega:*';
+      texto += `\n*Destinatario(a): ${MEU_ENDERECO.nome}*`
       texto += `\n${MEU_ENDERECO.endereco}, ${MEU_ENDERECO.numero}, ${MEU_ENDERECO.bairro} `;
       texto += `\n${MEU_ENDERECO.cidade}-${MEU_ENDERECO.uf} / ${MEU_ENDERECO.cep} ${MEU_ENDERECO.complemento}`;
       texto += `\n\n*Total (com entrega): R$ ${(VALOR_CARRINHO + VALOR_ENTREGA).toFixed(2).replace('.', ',')}*`;
@@ -469,7 +486,7 @@ cardapio.metodos = {
       setTimeout(() => {
         $("#msg-" + id).remove()
       }, tempo)
-    }, tempo)
+    }, 2000)
   },
 }
 
