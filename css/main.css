@@ -45,7 +45,7 @@ a.navbar-brand {
   border-radius: 20px;
   padding: 15px 25px;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
   transition: background 0.3s;
 }
 
@@ -92,7 +92,7 @@ a.navbar-brand {
   border-radius: 20px;
   padding: 15px 25px;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
 }
 
 .btn-icon-left {
@@ -144,7 +144,7 @@ a.navbar-brand {
   border-radius: 20px;
   padding: 15px 20px;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25) !important;
   border: none !important;
 }
 
@@ -183,13 +183,6 @@ a.navbar-brand {
   font-size: 40px;
   margin-top: 5px;
   margin-bottom: 30px;
-}
-
-.teste {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .card-icon {
@@ -244,6 +237,11 @@ a.navbar-brand {
 .card-item {
   height: 360px;
   transition: background 0.3s;
+}
+
+.card-item:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s;
 }
 
 .card-item .img-produto img {
@@ -428,6 +426,11 @@ a.navbar-brand {
   align-items: end;
 }
 
+.botoes-depoimento {
+  display: flex;
+  justify-content: space-around;
+}
+
 /* ---------------------------- */
 
 .reserva {
@@ -531,7 +534,7 @@ footer {
   height: 35px;
   background-color: var(--color-white);
   border-radius: 50px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
   color: var(--color-black);
   display: flex;
   justify-content: center;
@@ -656,7 +659,7 @@ footer {
   border-radius: 20px;
   padding: 15px 25px;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25) !important;
   border: none !important;
 }
 
@@ -757,7 +760,7 @@ select.form-control {
   justify-content: center;
   align-items: center;
   font-size: 20px;
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.25);
   color: var(--color-full-black);
   border-radius: 50px !important;
   cursor: pointer;

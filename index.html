@@ -380,25 +380,25 @@
                 </p>
               </div>
             </div>
-
-            <a
-              id="btnDepoimento-1"
-              class="btn btn-sm btn-white btn-social mr-3 active wow fadeInUp delay-03s"
-              onclick="cardapio.metodos.abrirDepoimento(1)"
-              >1</a
-            >
-            <a
-              id="btnDepoimento-2"
-              class="btn btn-sm btn-white btn-social mr-3 wow fadeInUp delay-04s"
-              onclick="cardapio.metodos.abrirDepoimento(2)"
-              >2</a
-            >
-            <a
-              id="btnDepoimento-3"
-              class="btn btn-sm btn-white btn-social wow fadeInUp delay-05s"
-              onclick="cardapio.metodos.abrirDepoimento(3)"
-              >3</a
-            >
+            <div class="botoes-depoimento">
+              <div class="botoes">
+                <a
+                id="btnDepoimento-1"
+                class="btn btn-sm btn-white btn-social mr-3 active wow fadeInUp delay-03s"
+                onclick="cardapio.metodos.abrirDepoimento(1)">1
+              </a>
+              <a
+                id="btnDepoimento-2"
+                class="btn btn-sm btn-white btn-social mr-3 wow fadeInUp delay-04s"
+                onclick="cardapio.metodos.abrirDepoimento(2)">2
+              </a>
+              <a
+                id="btnDepoimento-3"
+                class="btn btn-sm btn-white btn-social wow fadeInUp delay-05s"
+                onclick="cardapio.metodos.abrirDepoimento(3)">3
+              </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -591,6 +591,13 @@
                 </select>
               </div>
             </div>
+
+            <div class="col-12 col-lg-6 col-md-6 col-sm-12 col-one">
+              <div class="form-group">
+                <label>Seu Nome:</label>
+                <input id="txtNome" type="text" class="form-control" />
+              </div>
+            </div>
           </div>
 
           <div class="row mr-0 ml-0 hidden animated fadeIn" id="resumoCarrinho">
@@ -616,6 +623,8 @@
               </div>
               <div class="dados-produtos">
                 <p class="texto-endereco">
+                  <p>Destinatario(a): <b id="resumoNome"></b></p>
+
                   <b id="resumoEndereco"></b>
                 </p>
                 <p class="cidade-endereco" id="cidadendereco"></p>
@@ -633,7 +642,7 @@
               <span id="lblSubTotal"> R$ 0,00</span>
             </p>
             <p class="mb-0 texto-entrega">
-              <span><i class="fas fa-motorcycle"></i>Entrega:</span>
+              <span><i class="fas fa-motorcycle"></i> Entrega:</span>
               <span id="idlValorEntrega">+ R$ 0,00</span>
             </p>
             <p class="mb-0 texto-total">
@@ -644,7 +653,7 @@
           <div class="botoes">
             <a
               onclick="cardapio.metodos.carregarEndereco()"
-              class="btnContinuar btn btn-yellow float-right"
+              class="btnContinuar col-3 btn btn-yellow float-right"
               id="btnEtapaPedido"
               >Continuar
             </a>
