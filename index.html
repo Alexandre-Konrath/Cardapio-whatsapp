@@ -398,9 +398,28 @@
                 onclick="cardapio.metodos.abrirDepoimento(3)">3
               </a>
               </div>
+              <div>
+                <a
+                class="btn btn-sm btn-white wow fadeInUp delay-06s"
+                onclick="cardapio.metodos.abrirFazerDepoimento(true)">fazer depoimento
+              </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="fazer-depoimento">
+      <div id="containerDepoimento" class="animated  container hidden">
+        <h1>Deixe seu <span>depoimento</span> aqui!!!</h1>
+        <div class="inputs">
+          <label for="nome">Seu Nome:</label>
+          <input type="text" name="nome" id="inputNome">
+          <label for="inputDepoimento">Escreva seu depoimento aqui...</label>
+          <textarea name="input-depoimento" id="inputDepoimento" maxlength="180" cols="30" rows="10"></textarea>
+        </div>
+        <button onclick="cardapio.metodos.fecharFazerDepoimento(true)">Enviar avalição</button>
       </div>
     </section>
 
