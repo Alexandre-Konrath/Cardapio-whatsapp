@@ -160,8 +160,8 @@ a.navbar-brand {
   position: absolute;
   font-size: 12px;
   color: var(--color-primary);
-  right: 20px;
-  bottom: 10px;
+  right: 25px;
+  bottom: 5px;
 }
 
 /* ---------------------------- */
@@ -789,6 +789,9 @@ select.form-control {
 .toast.green {
   background-color: var(--color-green);
 }
+.toast.blue {
+  background-color: var(--color-blue);
+}
 
 .carrinho-vazio {
   margin: 0 auto;
@@ -906,4 +909,10 @@ select.form-control {
 #fazer-depoimento .container button:hover {
   cursor: pointer;
   background-color: var(--color-primary);
+}
+
+.btn-fechar {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
