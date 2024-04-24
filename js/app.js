@@ -472,6 +472,27 @@ cardapio.metodos = {
     $("#btnDepoimento-" + depoimento).addClass("active")
   },
 
+  abrirFazerDepoimento: (abrir) => {
+    if(abrir) {
+      $("#containerDepoimento").removeClass("hidden")
+      $("#containerDepoimento").addClass("fadeInLeft")
+    } else {
+      $("#containerDepoimento").addClass("hidden")
+    }
+  },
+
+  fecharFazerDepoimento: (fechar) => {
+    if(fechar) {
+      $("#containerDepoimento").addClass("fadeOutRight");
+      setTimeout(() => {
+        $("#containerDepoimento").addClass("hidden").removeClass("fadeOutRight");
+      }, 500);
+    } else {
+      $("#containerDepoimento").removeClass("hidden");
+    }
+  },
+
+
   mensagem: (texto, cor = 'red', tempo = 3500) => {
 
     let id = Math.floor(Date.now() * Math.random().toString())
