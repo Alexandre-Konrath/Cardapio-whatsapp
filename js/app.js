@@ -8,6 +8,7 @@ var cardapio = {};
 
 var MEU_CARRINHO = []
 var MEU_ENDERECO = null
+var MEU_DEPOIMENTO = null
 
 var VALOR_CARRINHO = 0
 var VALOR_ENTREGA = 5
@@ -476,6 +477,7 @@ cardapio.metodos = {
     if(abrir) {
       $("#containerDepoimento").removeClass("hidden")
       $("#containerDepoimento").addClass("fadeInLeft")
+      $("#inputNome").focus();
     } else {
       $("#containerDepoimento").addClass("hidden")
     }
@@ -486,12 +488,79 @@ cardapio.metodos = {
       $("#containerDepoimento").addClass("fadeOutRight");
       setTimeout(() => {
         $("#containerDepoimento").addClass("hidden").removeClass("fadeOutRight");
+        $("#inputNome").val("");
+        $("#inputDepoimento").val("");
+        cardapio.metodos.apagarDoLocalStorage('depoimento')
       }, 500);
     } else {
       $("#containerDepoimento").removeClass("hidden");
     }
   },
 
+  carregarDepoimento: () => {
+    let nome = $("#inputNome").val().trim();
+    let descricao = $("#inputDepoimento").val().trim();
+
+    if (nome.length <= 0) {
+      cardapio.metodos.mensagem("Informe o seu Nome, por favor.");
+      $("#inputNome").focus();
+      return false;
+    }
+
+    if (descricao.length <= 0) {
+      cardapio.metodos.mensagem("Deixe sua descrição, por favor.");
+      $("#inputDepoimento").focus();
+      return false;
+    }
+
+    if (descricao.length <= 36) {
+      cardapio.metodos.mensagem("Descrição muito pequena, escreva mais coisas.");
+      $("#inputDepoimento").focus();
+      return false;
+    }
+
+    const depoimento = {
+      nome: nome,
+      descricao: descricao
+    };
+
+    cardapio.metodos.salvarDadosNoLocalStorage('depoimento', depoimento);
+    cardapio.metodos.exibirDadosSalvos();
+
+  if (nome.length && descricao.length >= 1 ) {
+    cardapio.metodos.mensagem("Obrigado por deixar seu depoimento, Obrigado!!!", 'blue');
+  }
+  return true;
+},
+
+  salvarDadosNoLocalStorage: (chave, valor) => {
+    localStorage.setItem(chave, JSON.stringify(valor));
+},
+
+  lerDadosDoLocalStorage:(chave) => {
+    return JSON.parse(localStorage.getItem(chave));
+},
+
+  apagarDoLocalStorage: (chave) => {
+    localStorage.removeItem(chave)
+},
+
+  exibirDadosSalvos: () => {
+  $(document).ready(function() {
+    const depoimentoSalvo = cardapio.metodos.lerDadosDoLocalStorage('depoimento');
+
+    if (depoimentoSalvo) {
+      const htmlDepoimento = `
+        ${depoimentoSalvo.descricao} <br>
+        <span class="card-case-name">
+            <b>${depoimentoSalvo.nome}</b>
+        </span>
+      `;
+
+      $('#dadosSalvos').html(htmlDepoimento);
+    }
+  });
+},
 
   mensagem: (texto, cor = 'red', tempo = 3500) => {
 
@@ -510,6 +579,7 @@ cardapio.metodos = {
     }, 2000)
   },
 }
+
 
 cardapio.templates = {
 
