@@ -139,9 +139,9 @@
             <div class="d-flex img-banner wow fadeIn delay-05s">
               <img src="./img/burguer.png" alt="burguer" />
             </div>
-            <div class="card card-case wow fadeInRight delay-06s">
-              "Entrega rápida e funcionarios simpáticos.
-              <br />A comida chgeou quente e <br />
+            <div id="dadosSalvos" class="card card-case wow fadeInRight delay-06s">
+              "Entrega rápida e funcionarios simpáticos. <br>
+              A comida chgeou quente e
               muito saborosa!"
               <span class="card-case-name">
                 <b>Tiago Lopes</b>
@@ -413,13 +413,16 @@
     <section id="fazer-depoimento">
       <div id="containerDepoimento" class="animated  container hidden">
         <h1>Deixe seu <span>depoimento</span> aqui!!!</h1>
+        <span class="btn btn-remove no-mobile btn-fechar" onclick="cardapio.metodos.fecharFazerDepoimento(true)"><i class="fas fa-times"></i></span>
         <div class="inputs">
           <label for="nome">Seu Nome:</label>
           <input type="text" name="nome" id="inputNome">
           <label for="inputDepoimento">Escreva seu depoimento aqui...</label>
-          <textarea name="input-depoimento" id="inputDepoimento" maxlength="180" cols="30" rows="10"></textarea>
+          <textarea name="input-depoimento" id="inputDepoimento" maxlength="100" cols="30" rows="10"></textarea>
         </div>
-        <button onclick="cardapio.metodos.fecharFazerDepoimento(true)">Enviar avalição</button>
+        <div class="botao">
+          <button onclick="cardapio.metodos.carregarDepoimento()">Enviar avalição</button>
+        </div>
       </div>
     </section>
 
